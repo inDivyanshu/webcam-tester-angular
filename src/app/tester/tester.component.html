@@ -1,0 +1,15 @@
+<div>
+<ack-webcam
+  #webcam
+  reflect='true'
+  mime="image/jpeg"
+  [facingMode]="facingMode?'environment':'user'"
+  [options] = "options"
+  (success) = "onCamSuccess($event)"
+  (catch)   = "onCamError($event)"
+></ack-webcam>
+<button (click)="genBase64(webcam)" tooltip="This is used for image capture in base 64 format"> Capture </button>
+<button (click)="change()" tooltip="This is used for image capture in base 64 format"> Change Camera </button>
+
+
+<img [src]="base64" alt="captured image"></div>

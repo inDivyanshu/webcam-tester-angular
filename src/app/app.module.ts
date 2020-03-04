@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { WebCamModule } from 'ack-angular-webcam';
 import { AppComponent } from './app.component';
+import { TesterModule } from './tester/tester.module';
+import { TesterComponent } from './tester/tester.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    WebCamModule
+    TesterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
